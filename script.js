@@ -5,6 +5,7 @@ let name;
 cardContainer.innerHTML += `<div>
 <input type="text" placeholder="Enter name to search.." id="nameSearchInput">
 <button id="nameSearchButton">Search</button>
+<button id="resetPage">Reset Filters</button>
 </div>`;
 
 pokemonArray.forEach(pokemon => {
@@ -48,9 +49,6 @@ function handleSearchByName () {
                 return true
             } ;   
         });
-        
-        ///////?????????????????????????
-        console.log(searchedArray[0]);
         name = searchedArray[0].name.split("");
         name[0] = name[0].toUpperCase();
         let capitalName = name.join("");
@@ -78,9 +76,11 @@ function handleSearchByName () {
         cardContainer.innerHTML = `<div>
         <input type="text" placeholder="Enter name to search.." id="nameSearchInput">
         <button id="nameSearchButton">Search</button>
+        <button id="resetPage">Reset Filters</button>
         </div>`;
         cardContainer.innerHTML += cardHTML
-        document.getElementById("nameSearchButton").addEventListener("click", handleSearchByName)
+        document.getElementById("nameSearchButton").addEventListener("click", handleSearchByName);
+        document.getElementById("resetPage").addEventListener("click", handleRefresh);
     } 
     else {
         alert("Pokemon not found, please check spelling or try another")
@@ -92,3 +92,14 @@ function handleSearchByName () {
 };
 
 document.getElementById("nameSearchButton").addEventListener("click", handleSearchByName)
+
+// function to reset page and clear search filters
+
+function handleRefresh () {
+    location.reload();
+    console.log("hihi")
+};
+
+document.getElementById("resetPage").addEventListener("click", handleRefresh)
+
+// dragon
