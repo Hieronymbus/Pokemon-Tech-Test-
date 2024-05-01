@@ -4,7 +4,24 @@ let cardHTML;
 let name;
 cardContainer.innerHTML += `<div>
 <input type="text" placeholder="Enter name to search.." id="nameSearchInput">
-<button id="nameSearchButton">Search</button>
+<button id="nameSearchButton">Search</button><br/>
+<br/>
+<input type="checkbox" id="normal" name="type" value="Normal"><label for="normal">Normal</label>
+<input type="checkbox" id="fire" name="type" value="Fire"><label for="fire">Fire</label>
+<input type="checkbox" id="water" name="type" value="Water"><label for="water">Water</label>
+<input type="checkbox" id="electric" name="type" value="Electric"><label for="electric">Electric</label>
+<input type="checkbox" id="grass" name="type" value="Grass"><label for="grass">Grass</label>
+<input type="checkbox" id="ice" name="type" value="Ice"><label for="ice">Ice</label>
+<input type="checkbox" id="fighting" name="type" value="Fighting"><label for="fighting">Fighting</label>
+<input type="checkbox" id="poison" name="type" value="Poison"><label for="poison">Poison</label>
+<input type="checkbox" id="ground" name="type" value="Ground"><label for="ground">Ground</label>
+<input type="checkbox" id="flying" name="type" value="Flying"><label for="flying">Flying</label>
+<input type="checkbox" id="psychic" name="type" value="Psychic"><label for="psychic">Psychic</label>
+<input type="checkbox" id="bug" name="type" value="Bug"><label for="bug">Bug</label>
+<input type="checkbox" id="rock" name="type" value="Rock"><label for="rock">Rock</label>
+<input type="checkbox" id="ghost" name="type" value="Ghost"><label for="ghost">Ghost</label>
+<input type="checkbox" id="dragon" name="type" value="Dragon"><label for="dragon">Dragon</label><br/>
+<br>
 <button id="resetPage">Reset Filters</button>
 </div>`;
 
@@ -75,7 +92,24 @@ function handleSearchByName () {
     
         cardContainer.innerHTML = `<div>
         <input type="text" placeholder="Enter name to search.." id="nameSearchInput">
-        <button id="nameSearchButton">Search</button>
+        <button id="nameSearchButton">Search</button><br/>
+        <br/>
+        <input type="checkbox" id="normal" name="type" value="Normal"><label for="normal">Normal</label>
+        <input type="checkbox" id="fire" name="type" value="Fire"><label for="fire">Fire</label>
+        <input type="checkbox" id="water" name="type" value="Water"><label for="water">Water</label>
+        <input type="checkbox" id="electric" name="type" value="Electric"><label for="electric">Electric</label>
+        <input type="checkbox" id="grass" name="type" value="Grass"><label for="grass">Grass</label>
+        <input type="checkbox" id="ice" name="type" value="Ice"><label for="ice">Ice</label>
+        <input type="checkbox" id="fighting" name="type" value="Fighting"><label for="fighting">Fighting</label>
+        <input type="checkbox" id="poison" name="type" value="Poison"><label for="poison">Poison</label>
+        <input type="checkbox" id="ground" name="type" value="Ground"><label for="ground">Ground</label>
+        <input type="checkbox" id="flying" name="type" value="Flying"><label for="flying">Flying</label>
+        <input type="checkbox" id="psychic" name="type" value="Psychic"><label for="psychic">Psychic</label>
+        <input type="checkbox" id="bug" name="type" value="Bug"><label for="bug">Bug</label>
+        <input type="checkbox" id="rock" name="type" value="Rock"><label for="rock">Rock</label>
+        <input type="checkbox" id="ghost" name="type" value="Ghost"><label for="ghost">Ghost</label>
+        <input type="checkbox" id="dragon" name="type" value="Dragon"><label for="dragon">Dragon</label><br/>
+        <br>
         <button id="resetPage">Reset Filters</button>
         </div>`;
         cardContainer.innerHTML += cardHTML
@@ -102,4 +136,3 @@ function handleRefresh () {
 
 document.getElementById("resetPage").addEventListener("click", handleRefresh)
 
-// dragon
